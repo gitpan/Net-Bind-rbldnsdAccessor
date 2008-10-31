@@ -10,7 +10,7 @@ require DynaLoader;
 
 @ISA = qw(Exporter DynaLoader);
 
-$VERSION = do { my @r = (q$Revision: 0.04 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 0.05 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 %EXPORT_TAGS = (
     isc_constants	=> [qw(
@@ -75,7 +75,7 @@ Net::Bind::rbldnsdAccessor - access rbldnsd files with Perl or BIND
 =head1 DESCRIPTION
 
 B<Net::Bind::rbldnsdAccessor> provides direct access to B<rbldnsd> data
-files with Perland BIND-9.1+. The build process creates a library file
+files with Perl and BIND-9.1+. The build process creates a library file
 suitable for use with BIND 9.1+ that allows the B<named> daemon to directly access B<rbldnsd>
 files and use the same memory caching methods for those records to reduce
 the storage requirements for large DNSBL zones by several orders of
@@ -355,6 +355,7 @@ and file formats.
 	rblf_create_zone
 	rblf_query
 	rblf_next_answer
+	rblf_reinit
 
 =head1 PREREQUISITES
 

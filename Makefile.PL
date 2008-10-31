@@ -12,7 +12,7 @@ my $RANLIB = findpath('ranlib');
 my $zlib = do 'scripts/get_rbldnsd.pl';
 if ($@) {
   print $@;
-  exit;
+  exit 0;
 }
 my $extralibs = ($zlib) ? '' : '-lz';
 
@@ -27,7 +27,7 @@ WriteMakefile(
     'OBJECT'		=> 'rbldnsdAccessor.o '. $library,
     'PREREQ_PM'		=> {
 			     'Net::DNS::Codes'	 => '0.09',
-			     'Net::DNS::ToolKit' => '0.30',
+			     'Net::DNS::ToolKit' => '0.41',
 			   },
     'depend'		=> {
 			     'rbldnsdAccessor.o' => 'rbldnsdaccessor.h rbldnsdaccessor.c',

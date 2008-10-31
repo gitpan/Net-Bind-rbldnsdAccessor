@@ -1,5 +1,9 @@
 Revision history for Perl extension Net::Bind::rbldnsdAccessor.pm
 
+0.05  Wed Oct 15 14:19:29 PDT 2008
+	minor documentation updates and corrections
+	require Net::DNS::ToolKit version 0.41 or higher
+
 0.04  Thu Oct 19 17:43:55 PDT 2006
 	add zone file reload timer that ticks every 60 seconds
 
